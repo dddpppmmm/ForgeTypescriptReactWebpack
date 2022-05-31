@@ -50,6 +50,9 @@
                 {
                   "html": "./src/app/index.html",
                   "js": "./src/app/renderer.ts",
+                  "preload": {
+                    "js": "./src/app/preload.ts"
+                  },
                   "name": "main_window"
                 }
               ]
