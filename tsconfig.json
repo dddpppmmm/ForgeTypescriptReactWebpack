@@ -3,9 +3,10 @@
     "allowJs": true,
     "module": "commonjs",
     "skipLibCheck": true,
+    "noImplicitAny": false,
     "esModuleInterop": true,
     "jsx": "react",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "dist",
@@ -15,5 +16,6 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "excludeFiles": ["./node_modules/**"] 
 }
