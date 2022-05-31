@@ -44,7 +44,15 @@
           "@electron-forge/plugin-webpack",
           {
             "mainConfig": "./webpack.main.config.js",
-            "preload": "./main/preload/preload.js",
+            "main": {
+              "mainConfig": "./webpack.main.config.js",
+              "entryPoints": [
+                {
+                  "preload": "./src/main/preload/preload.ts",
+                  "main": "./src/main/main.ts"
+                }
+              ]
+            },
             "renderer": {
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
@@ -56,7 +64,15 @@
               ]
             }
           }
+        ],
+
+        [
+          "@electron-forge/plugin-electronegativity",
+          {
+            "isSarif": true
+          }
         ]
+
       ]
     }
   },
@@ -66,6 +82,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/plugin-electronegativity": "^6.0.0-beta.63",
     "@electron-forge/plugin-webpack": "6.0.0-beta.63",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
