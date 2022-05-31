@@ -5,7 +5,6 @@ module.exports = {
    */
   entry: [
     './src/main/index.ts',
-    './src/preload/preload.ts'
   ],
   // Put your normal webpack config below here
   module: {
